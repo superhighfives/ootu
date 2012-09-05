@@ -1,0 +1,33 @@
+!!! 5
+
+= conditional_html 'en'
+
+%head
+  %meta{:charset => "UTF-8"}
+  %meta{:"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1"}
+  
+  %title
+    Ootu - Get the YouTube ID from a video URL
+    
+  %meta{:name => "description", :content => "&7 is a zine"}
+  %meta{:name => "author", :content => "Charlie"}
+
+  %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+  %link{:rel => "stylesheet", :href => "/css/style.css"}
+
+%body{:class => @name}
+  
+  %header
+    .content
+    
+      %h1
+        %a{:href => "/", :title => "Ootu"} Ootu
+  
+      %h2
+        Get the YouTube ID from a video URL
+
+  = yield
+
+  %footer
+    :markdown
+      Made by [Charlie](http://charliegleason.com), with [Sinatra](http://www.sinatrarb.com/), [Haml](http://haml-lang.com/) and a cup of tea

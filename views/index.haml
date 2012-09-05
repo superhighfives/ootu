@@ -1,0 +1,19 @@
+%section.form
+  %form{ :action => "/", :method => "post"}
+    %fieldset
+      .field
+        %label{:for => "url"}
+          Enter the YouTube URL
+          %input{:type => "text", :name => "url", :class => "text"}
+          %input{:type => "submit", :value => "Send", :class => "button"}
+
+- if @id
+  %section.result
+    %strong Good news!
+    The ID for that YouTube video is 
+    %input{:type => "text", :name => "url", :class => "result", :value => "#{@id}"}
+
+- if @sadface
+  %section.sadface
+    %strong Oh no.
+    Ootu couldn't find an ID from that URL. :(
