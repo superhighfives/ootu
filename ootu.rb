@@ -4,6 +4,7 @@ require './sinatra/html5helpers'
 require './sinatra/hamlhelpers'
 require 'sass'
 require 'haml'
+require 'sanitize'
 
 class Ootu < Sinatra::Base
   helpers Sinatra::Html5BoilerplateHelpers
@@ -11,7 +12,7 @@ class Ootu < Sinatra::Base
   
   get '/' do
     @name = 'index'
-    @id = params[:v] if defined?(params[:v])
+    @id = Sanitize.clean(params[:v]) if defined?(params[:v])
     @sadface = true if params[:result] == 'sadface'
     haml :index
   end
