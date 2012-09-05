@@ -1,4 +1,4 @@
-ootu
+Ootu
 ====
 
-YouTube ID grabber.
+A sinatra-based YouTube ID grabber.

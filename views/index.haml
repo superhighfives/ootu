@@ -5,13 +5,14 @@
         %label{:for => "url"}
           Enter the YouTube URL
           %input{:type => "text", :name => "url", :class => "text"}
-          %input{:type => "submit", :value => "Send", :class => "button"}
+          %input{:type => "submit", :value => "Ootu it!", :class => "button"}
 
 - if @id
   %section.result
     %strong Good news!
     The ID for that YouTube video is 
-    %input{:type => "text", :name => "url", :class => "result", :value => "#{@id}"}
+    %span{:class => "code"}
+      = @id
 
 - if @sadface
   %section.sadface

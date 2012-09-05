@@ -105,31 +105,34 @@ a:hover { color: #036; }
  * Author: Charlie Gleason (charliegleason.com)
  */
 
-$gutter           : 24px;
+$padding-site     : 24px;
+$padding-block    : 3px;
 $color-text       : #666;
 $color-inputs     : #000;
 $color-highlight  : #1fd7ed;
-$grey             : #999;
+$color-error      : #ed1f24;
+$color-subtle     : #bbb;
+$color-light      : #999;
 
-body { padding: $gutter; font-family: monospace; color: #666; }
+body { padding: $padding-site; font-family: monospace; color: $color-text; }
 
-h1, h2 { font-weight: bold;
-  & h1 a, & h1 a:visited { color: #1fd7ed; }
-}
+h1, h2 { font-weight: bold; }
+h1 a, h1 a:visited { background: $color-highlight; color: #fff; display: inline-block; text-decoration: none; padding: $padding-block; }
 
 header, section { padding-bottom: 2em; }
-input { border: 1px solid #ddd; padding: 5px; font-family: monospace; color: $color-inputs;
-  &.button { background: $color-highlight; color: #fff; border: none; }
+input { border: 1px solid $color-subtle; padding: 5px; font-family: monospace; color: $color-inputs;
+  &.button { background: $color-highlight; color: #fff; border: none; font-weight: bold; }
 }
 
 section.result {
-  strong { color: #1fd7ed; }
+  strong { background: $color-highlight; color: #fff; padding: $padding-block; }
+  span.code { font-weight: bold; color: $color-inputs; }
 }
 
 section.sadface {
-  strong { background: #ed1f24; }
+  strong { background: $color-error; color: #fff; padding: $padding-block; }
 }
 
-footer { color: #ccc; border-top: 1px solid #ccc; padding-top: 1.25em;
-  a, a:visited { color: #999; }
+footer { color: $color-subtle; border-top: 1px solid #ccc; padding-top: 1.25em;
+  a, a:visited { color: $color-light; }
 }
